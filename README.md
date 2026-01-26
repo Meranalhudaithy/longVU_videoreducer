@@ -6,14 +6,14 @@ It focuses on **video token reduction** — not training or inference.
 
 ---
 
-## ✨ Features
+##  Features
 
 LongVU optimizes videos by:
 
-* ⏱ Sampling fewer frames per second
-* 🧠 Removing visually similar frames
-* 📉 Adaptively reducing spatial resolution
-* 📦 Producing compact MP4 files with minimal semantic loss
+*  Sampling fewer frames per second
+*  Removing visually similar frames
+*  Adaptively reducing spatial resolution
+*  Producing compact MP4 files with minimal semantic loss
 
 Ideal for:
 
@@ -24,20 +24,20 @@ Ideal for:
 
 ---
 
-## 🚫 Limitations
+##  Limitations
 
 LongVU does **not** provide:
 
-* ❌ LLM inference
-* ❌ Model training
-* ❌ Cloud services
-* ❌ GPU dependency
+* no  LLM inference
+* no Model training
+* no Cloud services
+* no GPU dependency
 
 All processing runs **locally** using Python and OpenCV.
 
 ---
 
-## 🖥️ Web Interface
+##  Web Interface
 
 The project includes a simple local web interface built with **FastAPI**:
 
@@ -53,7 +53,7 @@ http://127.0.0.1:8000
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 ### 1. Create a Virtual Environment
 
@@ -83,7 +83,7 @@ pip install fastapi uvicorn opencv-python python-multipart pillow imagehash nump
 
 ---
 
-## ▶️ Running the App
+## Running the App
 
 From the project root directory:
 
@@ -99,7 +99,7 @@ http://127.0.0.1:8000
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 LongVU/
@@ -114,14 +114,14 @@ LongVU/
 
 ---
 
-## 🧪 Example: Before vs After
+##  Example: Before vs After
 
 ### 🎥 Original Video
 
 * File: `videos\dia130_utt11 1.mp4`
 * Size: ~649 KB
 
-### 🎯 Reduced Output
+###  Reduced Output
 
 * File: `videos\c68e0901-3b97-4efd-8e7a-4163e1401ff4_dia130_utt11 1_reduced.mp4`
 * Size: ~278 KB
@@ -129,7 +129,7 @@ LongVU/
 
 ---
 
-## 📊 Size Comparison
+## Size Comparison
 
 | Version  | Size   |
 | -------- | ------ |
@@ -139,7 +139,7 @@ LongVU/
 
 ---
 
-## 🧠 Why This Matters for AI
+## Why This Matters for AI
 
 Video models do not process files — they process **tokens**.
 
@@ -158,7 +158,7 @@ You can:
 
 ---
 
-## 🚀 Roadmap & Future Improvements
+## Roadmap & Future Improvements
 
 Planned enhancements include:
 
@@ -170,6 +170,19 @@ Planned enhancements include:
 * Preset profiles for different model types
 
 ---
+## Development Challenges & Design Decision
+
+During development, one of the main challenges was the limited hardware and computational resources available on personal devices.
+
+Training or running full vision–language models requires powerful GPUs, large memory, and often cloud infrastructure, which were not accessible in this environment.
+
+Because of these constraints, implementing end-to-end model training or inference was not practical.
+
+Instead, this project focuses on optimizing the **video preprocessing stage**, which is a critical bottleneck in many AI pipelines.
+
+By concentrating on video reduction and token optimization, LongVU delivers meaningful improvements in efficiency while remaining lightweight, reliable, and accessible on standard laptops and desktops.
+
+---
 
 ## 📜 License
 
@@ -177,7 +190,7 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## ✨ Credits
+## Credits
 
 Built using:
 
